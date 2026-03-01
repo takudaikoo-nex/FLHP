@@ -16,7 +16,7 @@ const categories = [
 
 const articles = [
   {
-    image: "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=640&h=400&fit=crop",
+    image: "/images/S__58425361_0.jpg",
     tag: "セミナー報告",
     tagClass: "bg-cta text-white",
     date: "2026.02.20",
@@ -24,7 +24,7 @@ const articles = [
     excerpt: "身元引受と死後事務委任について、実際の事例を交えてわかりやすく解説。参加者からの質問にもお答えしました。",
   },
   {
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=640&h=400&fit=crop",
+    image: "/images/S__58425375_0.jpg",
     tag: "葬儀の豆知識",
     tagClass: "bg-main text-white",
     date: "2026.02.15",
@@ -32,7 +32,7 @@ const articles = [
     excerpt: "ネットで見かける葬儀費用の「平均額」。実はその数字だけでは判断できない理由をプロの目線で解説します。",
   },
   {
-    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=640&h=400&fit=crop",
+    image: "/images/S__58425363_0.jpg",
     tag: "代表日記",
     tagClass: "bg-accent text-white",
     date: "2026.02.10",
@@ -40,7 +40,7 @@ const articles = [
     excerpt: "身寄りのない方の葬儀を担当した時のこと。私たちにできることの意味を改めて考えさせられました。",
   },
   {
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=640&h=400&fit=crop",
+    image: "/images/S__58425375_0.jpg",
     tag: "セミナー報告",
     tagClass: "bg-cta text-white",
     date: "2026.01.28",
@@ -48,7 +48,7 @@ const articles = [
     excerpt: "実際にエンディングノートを記入するワークショップ形式で開催。参加者の皆様から好評をいただきました。",
   },
   {
-    image: "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=640&h=400&fit=crop",
+    image: "/images/S__58425361_0.jpg",
     tag: "葬儀の豆知識",
     tagClass: "bg-main text-white",
     date: "2026.01.20",
@@ -56,7 +56,7 @@ const articles = [
     excerpt: "家族の形が多様化する中で、お別れの形も変わりつつあります。それぞれの特徴を中立的な視点から解説。",
   },
   {
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=640&h=400&fit=crop",
+    image: "/images/S__58425357_0.jpg",
     tag: "代表日記",
     tagClass: "bg-accent text-white",
     date: "2026.01.10",
@@ -69,7 +69,7 @@ export default function ColumnPage() {
   return (
     <>
       <PageHero
-        image="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=1920&h=800&fit=crop"
+        image="/images/S__58425361_0.jpg"
         label="COLUMN & SEMINAR"
         title="コラム・セミナー情報"
         description="終活や葬儀に関するお役立ち情報を発信しています。"

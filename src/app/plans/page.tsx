@@ -21,7 +21,7 @@ const plans = [
     desc: "費用を最小限に抑え、火葬のみを誠実に行う形。慌ただしい現代だからこそ、シンプルに、しかし心を込めてお送りします。",
     includes: ["搬送（病院→安置所→火葬場）", "安置料", "ドライアイス", "火葬料", "骨壺・収骨"],
     notIncluded: ["式場利用", "通夜・告別式", "祭壇・生花"],
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
+    image: "/images/S__58425357_0.jpg",
     tagColor: "bg-main",
   },
   {
@@ -32,7 +32,7 @@ const plans = [
     desc: "火葬の前に、お花を添えてゆっくり対面する時間を設ける形。大切な方との最後のひとときを、穏やかにお過ごしいただけます。",
     includes: ["搬送", "安置料", "ドライアイス", "お別れのお時間", "火葬料", "骨壺・収骨", "生花"],
     notIncluded: ["通夜式", "読経"],
-    image: "https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=800&h=600&fit=crop",
+    image: "/images/S__58425365_0.jpg",
     tagColor: "bg-accent",
   },
   {
@@ -53,7 +53,7 @@ const plans = [
       "遺影写真",
     ],
     notIncluded: [],
-    image: "https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=800&h=600&fit=crop",
+    image: "/images/S__58425361_0.jpg",
     tagColor: "bg-cta",
   },
 ];
@@ -62,7 +62,7 @@ export default function PlansPage() {
   return (
     <>
       <PageHero
-        image="https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=1920&h=800&fit=crop"
+        image="/images/S__58425365_0.jpg"
         label="FUNERAL PLANS"
         title="納得して選ぶ、3つの形"
         description="すべてのプランに、中立なプロの目と温かな心が込められています。"
@@ -153,7 +153,7 @@ export default function PlansPage() {
         <div className="max-w-5xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
           <div className="rounded-2xl overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop"
+              src="/images/S__58425375_0.jpg"
               alt="見積もり無料査定"
               width={800}
               height={500}

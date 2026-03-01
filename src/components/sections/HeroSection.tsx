@@ -9,20 +9,20 @@ import { Button } from "@/components/ui/Button";
 
 const slides = [
   {
-    src: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=1920&h=1080&fit=crop",
-    alt: "温かみのある対応風景",
+    src: "/images/S__58425361_0.jpg",
+    alt: "父と子が祭壇の前で合掌する様子",
   },
   {
-    src: "https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=1920&h=1080&fit=crop",
-    alt: "花祭壇",
+    src: "/images/S__58425375_0.jpg",
+    alt: "ピンクの花祭壇",
   },
   {
-    src: "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=1920&h=1080&fit=crop",
-    alt: "セミナーの様子",
+    src: "/images/S__58425365_0.jpg",
+    alt: "青い花祭壇と棺",
   },
   {
-    src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&h=1080&fit=crop",
-    alt: "提携先との連携",
+    src: "/images/S__58425374_0.jpg",
+    alt: "二人の子供が祭壇に向き合う",
   },
 ];
 

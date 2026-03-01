@@ -26,7 +26,7 @@ export function CeoSection() {
               }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop"
+                src="/images/S__58425366_0.jpg"
                 alt="代表 大石 康太"
                 width={600}
                 height={800}

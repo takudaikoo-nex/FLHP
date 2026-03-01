@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 
 const articles = [
   {
-    image: "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=640&h=400&fit=crop",
+    image: "/images/S__58425358_0.jpg",
     tag: "セミナー報告",
     tagClass: "text-cta",
     date: "2026.02.20",
@@ -16,7 +16,7 @@ const articles = [
       "身元引受と死後事務委任について、実際の事例を交えてわかりやすく解説。参加者からの質問にもお答えしました。",
   },
   {
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=640&h=400&fit=crop",
+    image: "/images/S__58425363_0.jpg",
     tag: "葬儀の豆知識",
     tagClass: "text-main",
     date: "2026.02.15",
@@ -25,7 +25,7 @@ const articles = [
       "ネットで見かける葬儀費用の「平均額」。実はその数字だけでは判断できない理由をプロの目線で解説します。",
   },
   {
-    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=640&h=400&fit=crop",
+    image: "/images/S__58425364_0.jpg",
     tag: "代表日記",
     tagClass: "text-accent",
     date: "2026.02.10",

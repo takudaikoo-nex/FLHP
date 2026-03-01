@@ -76,7 +76,7 @@ export function FacilitySection() {
               }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1000&h=625&fit=crop"
+                src="/images/S__58425357_0.jpg"
                 alt="ファーストリーフ自社斎場"
                 width={1000}
                 height={625}

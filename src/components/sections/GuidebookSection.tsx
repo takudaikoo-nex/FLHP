@@ -30,7 +30,7 @@ export function GuidebookSection() {
                 style={{ transform: "rotateY(-6deg) rotateX(2deg)" }}
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=560&fit=crop"
+                  src="/images/S__58425375_0.jpg"
                   alt="無料ガイドブック"
                   width={280}
                   height={392}

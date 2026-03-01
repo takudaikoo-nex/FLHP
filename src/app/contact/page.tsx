@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
-        image="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&h=800&fit=crop"
+        image="/images/S__58425375_0.jpg"
         label="CONTACT"
         title="お問い合わせ"
         description="お電話・メールフォームからお気軽にご相談ください。"

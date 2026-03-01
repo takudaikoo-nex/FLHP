@@ -20,7 +20,7 @@ const videos: VideoItem[] = [
   {
     id: "message",
     videoId: "dQw4w9WgXcQ",
-    thumb: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=960&h=540&fit=crop",
+    thumb: "/images/S__58425366_0.jpg",
     title: "代表メッセージ ─ 中立な味方であるために",
     desc: "ファーストリーフ代表 大石康太が、私たちの理念と「中立であること」の意味についてお話しします。",
     tag: "代表メッセージ",
@@ -30,7 +30,7 @@ const videos: VideoItem[] = [
   {
     id: "tour",
     videoId: "dQw4w9WgXcQ",
-    thumb: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=960&h=540&fit=crop",
+    thumb: "/images/S__58425357_0.jpg",
     title: "自社斎場ルームツアー ─ 1日1組限定の空間",
     desc: "茅ヶ崎の自社斎場を動画でご案内。安置室から式場まで、落ち着いた空間をご覧ください。",
     tag: "斎場ルームツアー",
@@ -40,7 +40,7 @@ const videos: VideoItem[] = [
   {
     id: "seminar",
     videoId: "dQw4w9WgXcQ",
-    thumb: "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=960&h=540&fit=crop",
+    thumb: "/images/S__58425362_0.jpg",
     title: "終活セミナー ─ 行政書士と共催の第3回ダイジェスト",
     desc: "身元引受と死後事務委任について解説した終活セミナーの模様をダイジェストでお届けします。",
     tag: "セミナー",
@@ -50,7 +50,7 @@ const videos: VideoItem[] = [
   {
     id: "qa",
     videoId: "dQw4w9WgXcQ",
-    thumb: "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=960&h=540&fit=crop",
+    thumb: "/images/S__58425358_0.jpg",
     title: "よくある質問 ─ 葬儀社を決める前に知っておきたいこと",
     desc: "「安置と搬送の違いは？」「見積もりのチェックポイントは？」よくいただくご質問に動画でお答えします。",
     tag: "よくある質問",

@@ -66,7 +66,7 @@ export default function SupportPage() {
   return (
     <>
       <PageHero
-        image="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&h=800&fit=crop"
+        image="/images/S__58425361_0.jpg"
         label="TOTAL SUPPORT"
         title="一人にしない、迷わせない。"
         description="地域の医療・介護・法務とつなぐ、一生涯の安心。"
@@ -83,7 +83,7 @@ export default function SupportPage() {
             }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=800&h=600&fit=crop"
+              src="/images/S__58425361_0.jpg"
               alt="チームとしての相談風景"
               width={800}
               height={600}

@@ -23,19 +23,19 @@ const staff = [
   {
     name: "大石 康太",
     role: "代表取締役",
-    photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=500&fit=crop",
+    photo: "/images/S__58425366_0.jpg",
     message: "中立な立場で、ご遺族の味方であり続けます。",
   },
   {
     name: "スタッフ A",
     role: "葬儀コーディネーター",
-    photo: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=500&fit=crop",
+    photo: "/images/S__58425362_0.jpg",
     message: "お一人おひとりのお気持ちに寄り添い、丁寧にサポートいたします。",
   },
   {
     name: "スタッフ B",
     role: "終活アドバイザー",
-    photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=500&fit=crop",
+    photo: "/images/S__58425363_0.jpg",
     message: "セミナーや個別相談を通じて、安心をお届けします。",
   },
 ];
@@ -44,7 +44,7 @@ export default function CompanyPage() {
   return (
     <>
       <PageHero
-        image="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&h=800&fit=crop"
+        image="/images/S__58425375_0.jpg"
         label="COMPANY"
         title="会社概要"
         description="静かに、やさしく、確かに。ファーストリーフ株式会社のご紹介です。"
@@ -77,7 +77,7 @@ export default function CompanyPage() {
             }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop"
+              src="/images/S__58425366_0.jpg"
               alt="代表 大石 康太"
               width={600}
               height={800}

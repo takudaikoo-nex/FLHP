@@ -13,8 +13,7 @@ const plans = [
     unit: "万円台〜",
     desc: "費用を最小限に抑えたい方へ。火葬のみを誠実にお送りします。",
     includes: ["搬送", "安置", "火葬", "骨壺"],
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
+    image: "/images/S__58425360_0.jpg",
   },
   {
     num: "PLAN 02",
@@ -23,8 +22,7 @@ const plans = [
     unit: "万円台〜",
     desc: "お花を添えてゆっくり対面するお時間を。穏やかな最後のひとときを。",
     includes: ["搬送", "安置", "お別れの時間", "火葬", "骨壺", "生花"],
-    image:
-      "https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=800&h=600&fit=crop",
+    image: "/images/S__58425359_0.jpg",
   },
   {
     num: "PLAN 03",
@@ -33,8 +31,7 @@ const plans = [
     unit: "万円台〜",
     desc: "親しい方々でゆっくりお別れ。マンション・団地でも対応可能な自宅葬も。",
     includes: ["搬送", "安置", "通夜式", "告別式", "火葬", "骨壺", "生花祭壇"],
-    image:
-      "https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=800&h=600&fit=crop",
+    image: "/images/S__58425374_0.jpg",
   },
 ];
 

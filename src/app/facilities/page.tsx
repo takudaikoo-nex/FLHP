@@ -66,7 +66,7 @@ export default function FacilitiesPage() {
   return (
     <>
       <PageHero
-        image="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=800&fit=crop"
+        image="/images/S__58425357_0.jpg"
         label="FACILITY GUIDE"
         title="神奈川県の<br/>斎場・火葬場ガイド"
         description="地域の施設を熟知した私たちが、最適な場所をご提案します。"
@@ -84,7 +84,7 @@ export default function FacilitiesPage() {
               }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1000&h=625&fit=crop"
+                src="/images/S__58425357_0.jpg"
                 alt="ファーストリーフ自社斎場"
                 width={1000}
                 height={625}
