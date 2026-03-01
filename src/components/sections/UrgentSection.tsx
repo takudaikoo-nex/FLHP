@@ -52,7 +52,7 @@ export function UrgentSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="bg-dark-surface rounded-2xl p-8"
+            className="bg-dark-surface p-8 border-l-2 border-main/40"
           >
             <h3 className="font-mincho text-base font-semibold text-ink-inverse mb-6">
               知ってほしい「安心の順序」

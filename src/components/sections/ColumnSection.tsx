@@ -9,7 +9,7 @@ const articles = [
   {
     image: "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=640&h=400&fit=crop",
     tag: "セミナー報告",
-    tagClass: "bg-cta text-white",
+    tagClass: "text-cta",
     date: "2026.02.20",
     title: "行政書士と共催「終活セミナー」第3回を開催しました",
     excerpt:
@@ -18,7 +18,7 @@ const articles = [
   {
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=640&h=400&fit=crop",
     tag: "葬儀の豆知識",
-    tagClass: "bg-main text-white",
+    tagClass: "text-main",
     date: "2026.02.15",
     title: "「葬儀費用の相場」は信じていいの？知っておきたい5つのポイント",
     excerpt:
@@ -27,7 +27,7 @@ const articles = [
   {
     image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=640&h=400&fit=crop",
     tag: "代表日記",
-    tagClass: "bg-accent text-white",
+    tagClass: "text-accent",
     date: "2026.02.10",
     title: "「おひとりさま」のお見送りで感じたこと ─ ある冬の日の記録",
     excerpt:
@@ -44,43 +44,80 @@ export function ColumnSection() {
           title="コラム・セミナー最新情報"
           description="終活セミナーのレポートや葬儀の豆知識など、お役立ち情報を発信しています。"
         />
-        <div className="grid md:grid-cols-3 gap-6">
-          {articles.map((a, i) => (
-            <motion.div
-              key={a.date + a.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-surface rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300 group cursor-pointer"
+        {/* 非対称レイアウト: メイン1+リスト2 */}
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* メイン記事 — 写真大、グラデマスク */}
+          <motion.a
+            href="/column"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5 }}
+            className="group block"
+          >
+            <div
+              className="relative overflow-hidden mb-4"
+              style={{
+                WebkitMaskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
+                maskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
+              }}
             >
-              <div className="relative overflow-hidden">
-                <Image
-                  src={a.image}
-                  alt={a.title}
-                  width={640}
-                  height={400}
-                  className="object-cover aspect-[16/10] w-full group-hover:scale-105 transition-transform duration-500"
-                />
-                <span
-                  className={`absolute top-3 left-3 text-[10px] font-semibold px-2.5 py-1 rounded-pill ${a.tagClass}`}
-                >
-                  {a.tag}
-                </span>
-              </div>
-              <div className="p-5">
-                <div className="text-[10px] font-display tracking-wider text-ink-muted mb-2">
-                  {a.date}
+              <Image
+                src={articles[0].image}
+                alt={articles[0].title}
+                width={640}
+                height={400}
+                className="object-cover aspect-[16/10] w-full group-hover:scale-[1.02] transition-transform duration-500"
+              />
+            </div>
+            <div className={`text-[11px] font-semibold ${articles[0].tagClass} mb-1`}>
+              {articles[0].tag}
+            </div>
+            <h3 className="font-mincho text-lg font-semibold leading-snug mb-2">
+              {articles[0].title}
+            </h3>
+            <p className="text-xs text-ink-secondary leading-relaxed line-clamp-3">
+              {articles[0].excerpt}
+            </p>
+          </motion.a>
+
+          {/* サブ記事 — 横型リスト、仕切り線 */}
+          <div className="space-y-0 divide-y divide-border-light">
+            {articles.slice(1).map((a, i) => (
+              <motion.a
+                href="/column"
+                key={a.date + a.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                className="grid grid-cols-[120px_1fr] gap-4 py-5 first:pt-0 group"
+              >
+                <div className="overflow-hidden">
+                  <Image
+                    src={a.image}
+                    alt={a.title}
+                    width={120}
+                    height={80}
+                    className="object-cover aspect-[3/2] w-full group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-                <h3 className="font-mincho text-sm font-semibold leading-snug mb-2 line-clamp-2">
-                  {a.title}
-                </h3>
-                <p className="text-xs text-ink-secondary leading-relaxed line-clamp-3">
-                  {a.excerpt}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className={`text-[10px] font-semibold ${a.tagClass}`}>
+                      {a.tag}
+                    </span>
+                    <span className="text-[10px] font-display tracking-wider text-ink-muted">
+                      {a.date}
+                    </span>
+                  </div>
+                  <h3 className="font-mincho text-sm font-semibold leading-snug line-clamp-2">
+                    {a.title}
+                  </h3>
+                </div>
+              </motion.a>
+            ))}
+          </div>
         </div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

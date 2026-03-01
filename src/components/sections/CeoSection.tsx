@@ -8,7 +8,7 @@ export function CeoSection() {
     <section className="py-section bg-base-warm">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Photo */}
+          {/* Photo — 角丸なし、グラデーションマスクで余韻 */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -16,7 +16,15 @@ export function CeoSection() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-lg">
+            <div
+              className="overflow-hidden"
+              style={{
+                WebkitMaskImage:
+                  "linear-gradient(to bottom, black 70%, transparent 100%)",
+                maskImage:
+                  "linear-gradient(to bottom, black 70%, transparent 100%)",
+              }}
+            >
               <Image
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop"
                 alt="代表 大石 康太"
@@ -25,7 +33,6 @@ export function CeoSection() {
                 className="object-cover w-full"
               />
             </div>
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/20 rounded-2xl -z-10" />
           </motion.div>
 
           {/* Text */}
@@ -50,7 +57,7 @@ export function CeoSection() {
             <p className="text-sm text-ink-secondary leading-relaxed mb-8">
               私は葬儀社の人間ではなく、ご遺族の立場に立つ中立なパートナーです。深い悲しみと混乱の中にいる時こそ、まずは「落ち着くための時間」を一緒に作りましょう。
             </p>
-            <div className="bg-main-faint rounded-xl p-5">
+            <div className="border-t border-border-light pt-5">
               <div className="text-xs font-semibold text-main-dark tracking-wide mb-2">
                 社名の由来 ── First Leaf
               </div>

@@ -13,8 +13,8 @@ const plans = [
     unit: "万円台〜",
     desc: "費用を最小限に抑えたい方へ。火葬のみを誠実にお送りします。",
     includes: ["搬送", "安置", "火葬", "骨壺"],
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
-    tagColor: "bg-main text-white",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
   },
   {
     num: "PLAN 02",
@@ -23,8 +23,8 @@ const plans = [
     unit: "万円台〜",
     desc: "お花を添えてゆっくり対面するお時間を。穏やかな最後のひとときを。",
     includes: ["搬送", "安置", "お別れの時間", "火葬", "骨壺", "生花"],
-    image: "https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=800&h=600&fit=crop",
-    tagColor: "bg-accent text-white",
+    image:
+      "https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=800&h=600&fit=crop",
   },
   {
     num: "PLAN 03",
@@ -33,8 +33,8 @@ const plans = [
     unit: "万円台〜",
     desc: "親しい方々でゆっくりお別れ。マンション・団地でも対応可能な自宅葬も。",
     includes: ["搬送", "安置", "通夜式", "告別式", "火葬", "骨壺", "生花祭壇"],
-    image: "https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=800&h=600&fit=crop",
-    tagColor: "bg-cta text-white",
+    image:
+      "https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=800&h=600&fit=crop",
   },
 ];
 
@@ -47,7 +47,8 @@ export function PlansSection() {
           title="納得して選ぶ、3つの形"
           description="すべてのプランに、中立なプロの目と、温かな心が込められています。"
         />
-        <div className="grid md:grid-cols-3 gap-6">
+        {/* gap-px + bg-border で仕切り線 / 角丸・影なし */}
+        <div className="grid md:grid-cols-3 gap-px bg-border-light">
           {plans.map((plan, i) => (
             <motion.div
               key={plan.num}
@@ -55,8 +56,9 @@ export function PlansSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-surface rounded-2xl overflow-hidden shadow-sm hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300"
+              className="bg-surface overflow-hidden"
             >
+              {/* 写真 — 角丸なし、下端グラデフェード */}
               <div className="relative">
                 <Image
                   src={plan.image}
@@ -65,9 +67,8 @@ export function PlansSection() {
                   height={600}
                   className="object-cover aspect-[4/3] w-full"
                 />
-                <span
-                  className={`absolute top-3 left-3 text-[10px] font-display font-medium tracking-[0.12em] px-3 py-1 rounded-pill ${plan.tagColor}`}
-                >
+                <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-surface to-transparent" />
+                <span className="absolute top-3 left-3 text-[10px] font-display font-medium tracking-[0.12em] px-3 py-1 bg-white/90 text-ink backdrop-blur-sm">
                   {plan.num}
                 </span>
               </div>
@@ -90,7 +91,7 @@ export function PlansSection() {
                   {plan.includes.map((item) => (
                     <span
                       key={item}
-                      className="text-[10px] px-2 py-0.5 bg-main-faint text-main-dark rounded-pill"
+                      className="text-[10px] px-2 py-0.5 border border-border-light text-ink-secondary"
                     >
                       {item}
                     </span>

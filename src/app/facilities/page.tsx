@@ -51,10 +51,10 @@ const areas = [
   { key: "kennou" as const, label: "県央・県西" },
 ];
 
-const scaleClass: Record<string, string> = {
-  S: "bg-main-pale text-main-dark",
-  M: "bg-accent-pale text-accent-dark",
-  L: "bg-cta-surface text-cta",
+const scaleStyle: Record<string, string> = {
+  S: "text-main",
+  M: "text-accent",
+  L: "text-cta",
 };
 const scaleLabel: Record<string, string> = {
   S: "S ─ 小規模",
@@ -72,18 +72,26 @@ export default function FacilitiesPage() {
         description="地域の施設を熟知した私たちが、最適な場所をご提案します。"
       />
 
-      {/* Own Facility */}
+      {/* Own Facility — 写真グラデマスク */}
       <section className="py-section bg-surface" id="own">
         <div className="max-w-5xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
-          <div className="relative rounded-2xl overflow-hidden shadow-lg">
-            <Image
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1000&h=625&fit=crop"
-              alt="ファーストリーフ自社斎場"
-              width={1000}
-              height={625}
-              className="object-cover w-full"
-            />
-            <span className="absolute top-4 left-4 bg-cta text-white text-xs font-bold px-3 py-1.5 rounded-pill">
+          <div className="relative">
+            <div
+              className="overflow-hidden"
+              style={{
+                WebkitMaskImage: "linear-gradient(to right, black 80%, transparent 100%)",
+                maskImage: "linear-gradient(to right, black 80%, transparent 100%)",
+              }}
+            >
+              <Image
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1000&h=625&fit=crop"
+                alt="ファーストリーフ自社斎場"
+                width={1000}
+                height={625}
+                className="object-cover w-full"
+              />
+            </div>
+            <span className="absolute top-4 left-4 bg-cta text-white text-xs font-bold px-3 py-1.5">
               &#9733; 自社斎場
             </span>
           </div>
@@ -116,7 +124,7 @@ export default function FacilitiesPage() {
         </div>
       </section>
 
-      {/* Area Listings */}
+      {/* Area Listings — テーブル形式 */}
       <section className="py-section bg-base">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -128,45 +136,46 @@ export default function FacilitiesPage() {
 
           {areas.map((area) => (
             <div key={area.key} className="mb-16 last:mb-0">
-              <h3 className="font-mincho text-lg font-semibold mb-6 flex items-center gap-2">
+              <h3 className="font-mincho text-lg font-semibold mb-4 flex items-center gap-2">
                 {area.label}
-                <span className="text-[10px] font-display bg-main-pale text-main-dark px-2 py-0.5 rounded-pill">
-                  {facilities[area.key].length}
+                <span className="text-[10px] font-display text-main">
+                  ({facilities[area.key].length})
                 </span>
               </h3>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
+              {/* テーブル風リスト */}
+              <div className="divide-y divide-border-light border-t border-border-light">
                 {facilities[area.key].map((f) => (
                   <div
                     key={f.name}
-                    className="bg-surface rounded-xl overflow-hidden shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300"
+                    className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-3 md:gap-6 items-start md:items-center py-5"
                   >
-                    <div className="p-5">
-                      <div className="flex items-start justify-between mb-2">
+                    <div>
+                      <div className="flex items-center gap-2 mb-1">
                         <h4 className="font-mincho text-sm font-semibold">{f.name}</h4>
-                        <span className={`text-[9px] font-bold px-2 py-0.5 rounded-pill shrink-0 ${scaleClass[f.scale]}`}>
+                        <span className={`text-[10px] font-medium ${scaleStyle[f.scale]}`}>
                           {scaleLabel[f.scale]}
                         </span>
                       </div>
-                      <p className="text-[10px] text-ink-muted mb-2">{f.addr}</p>
-                      <div className="flex flex-wrap gap-1 mb-3">
+                      <p className="text-[10px] text-ink-muted mb-1">{f.addr}</p>
+                      <div className="flex flex-wrap gap-1">
                         {f.tags.map((tag) => (
-                          <span key={tag} className="text-[9px] px-2 py-0.5 bg-main-faint text-main-dark rounded-pill">
+                          <span key={tag} className="text-[9px] px-2 py-0.5 border border-border-light text-ink-secondary">
                             {tag}
                           </span>
                         ))}
                       </div>
-                      <div className="text-[10px] text-ink-secondary space-y-0.5 mb-3">
-                        <div>火葬料：市内 {f.local} ／ 市外 {f.outside}</div>
-                        {f.hall !== "なし" && <div>式場料：{f.hall}</div>}
-                        <div>休場日：{f.closed}</div>
-                      </div>
-                      <a
-                        href={`tel:${f.tel.replace(/-/g, "")}`}
-                        className="block text-center py-2 bg-base rounded-lg text-xs font-semibold text-main hover:bg-main hover:text-white transition-colors"
-                      >
-                        TEL {f.tel}
-                      </a>
                     </div>
+                    <div className="text-[10px] text-ink-secondary space-y-0.5">
+                      <div>火葬料：市内 {f.local} ／ 市外 {f.outside}</div>
+                      {f.hall !== "なし" && <div>式場料：{f.hall}</div>}
+                      <div>休場日：{f.closed}</div>
+                    </div>
+                    <a
+                      href={`tel:${f.tel.replace(/-/g, "")}`}
+                      className="text-xs font-semibold text-main hover:underline"
+                    >
+                      TEL {f.tel}
+                    </a>
                   </div>
                 ))}
               </div>

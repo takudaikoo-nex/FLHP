@@ -66,10 +66,16 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* CEO */}
+      {/* CEO — 写真グラデマスク */}
       <section className="py-section bg-base">
         <div className="max-w-5xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
-          <div className="rounded-2xl overflow-hidden shadow-lg">
+          <div
+            className="overflow-hidden"
+            style={{
+              WebkitMaskImage: "linear-gradient(to bottom, black 75%, transparent 100%)",
+              maskImage: "linear-gradient(to bottom, black 75%, transparent 100%)",
+            }}
+          >
             <Image
               src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop"
               alt="代表 大石 康太"
@@ -94,7 +100,7 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* Staff */}
+      {/* Staff — 横型リスト（丸写真やめ）*/}
       <section className="py-section bg-surface">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -103,29 +109,37 @@ export default function CompanyPage() {
               スタッフ紹介
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="divide-y divide-border-light">
             {staff.map((s) => (
-              <div key={s.name} className="text-center">
-                <div className="w-40 h-40 mx-auto rounded-full overflow-hidden mb-4 shadow-md">
-                  <Image src={s.photo} alt={s.name} width={160} height={160} className="object-cover w-full h-full" />
+              <div key={s.name} className="grid grid-cols-[80px_1fr] md:grid-cols-[100px_1fr] gap-5 py-6 items-center">
+                <div
+                  className="overflow-hidden aspect-square"
+                  style={{
+                    WebkitMaskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
+                    maskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
+                  }}
+                >
+                  <Image src={s.photo} alt={s.name} width={100} height={100} className="object-cover w-full h-full" />
                 </div>
-                <div className="text-[10px] text-main font-medium mb-1">{s.role}</div>
-                <h3 className="font-mincho text-base font-semibold mb-2">{s.name}</h3>
-                <p className="text-xs text-ink-secondary">{s.message}</p>
+                <div>
+                  <div className="text-[10px] text-main font-medium mb-0.5">{s.role}</div>
+                  <h3 className="font-mincho text-base font-semibold mb-1">{s.name}</h3>
+                  <p className="text-xs text-ink-secondary">{s.message}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Company Info */}
+      {/* Company Info — 角丸なし */}
       <section className="py-section bg-base">
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-12">
             <div className="section-label">CORPORATE DATA</div>
             <h2 className="font-mincho text-[clamp(1.5rem,3vw,2.2rem)] font-semibold">会社情報</h2>
           </div>
-          <div className="bg-surface rounded-2xl overflow-hidden shadow-sm">
+          <div className="bg-surface overflow-hidden border border-border-light">
             {companyInfo.map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[120px_1fr] ${i > 0 ? "border-t border-border-light" : ""}`}>
                 <div className="py-4 px-5 bg-main-faint text-xs font-semibold text-main-dark">{row.label}</div>
@@ -136,7 +150,7 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* Map */}
+      {/* Map — 角丸なし */}
       <section className="py-section bg-surface">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-8">
@@ -144,7 +158,7 @@ export default function CompanyPage() {
             <h2 className="font-mincho text-xl font-semibold">アクセス</h2>
             <p className="text-xs text-ink-muted mt-2">{SITE.address}</p>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-lg aspect-[16/9] bg-base-warm flex items-center justify-center">
+          <div className="overflow-hidden aspect-[16/9] bg-base-warm flex items-center justify-center border border-border-light">
             <p className="text-sm text-ink-muted">Google Map 埋め込みエリア</p>
           </div>
         </div>

@@ -16,7 +16,7 @@ export function GuidebookSection() {
     <section className="py-section bg-gradient-to-br from-main-dark via-main to-main-vivid text-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Mock */}
+          {/* Book mock — 角丸なし */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -26,7 +26,7 @@ export function GuidebookSection() {
           >
             <div className="relative" style={{ perspective: "800px" }}>
               <div
-                className="rounded-xl overflow-hidden shadow-2xl"
+                className="overflow-hidden shadow-2xl"
                 style={{ transform: "rotateY(-6deg) rotateX(2deg)" }}
               >
                 <Image
